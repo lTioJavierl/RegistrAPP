@@ -51,23 +51,20 @@
         type="password"
         label= Contraseña
         ></app-custom-input>
-
-        <!-- ==================== Cuenta ===================== -->
-        
-        <b>En desarrollo</b>
-        <select class="custom-select" icon="lock-closed-outline">
-          <option value="profesor">Profesor</option>
-          <option value="alumno">Alumno</option>
-        </select>
-
         <div class="validators" *ngIf="form.controls.password.errors && form.controls.password.touched">
 
           <div *ngIf="form.controls.password.errors?.['required']">La contraseña es requerida para continuar</div>
 
         </div>
 
+        <!-- ==================== Cuenta ===================== -->
         
-        
+        <label>Tipo de cuenta</label>
+        <select class="custom-select" icon="lock-closed-outline" formControlName="tipo_pagina">
+          <option value="Alumno">Alumno</option>
+          <option value="Profesor">Profesor</option>
+        </select>
+
         <ion-button expand="block" mode="ios" class="submit" type="submit" [disabled]="form.invalid">
           Registrarse
         </ion-button>

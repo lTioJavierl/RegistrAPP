@@ -15,7 +15,8 @@ form = new FormGroup({
     uid: new FormControl(''),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
-    name: new FormControl('', [Validators.required, Validators.minLength(4)])
+    name: new FormControl('', [Validators.required, Validators.minLength(4)]),
+    tipo_pagina: new FormControl('',[Validators.required])
   })
 
 
@@ -69,6 +70,8 @@ form = new FormGroup({
       this.firebaseSvc.setDocument(path, this.form.value).then(async res => {
 
         this.utilsSvc.saveLocalStorage('user', this.form.value);
+        this.utilsSvc.routerLink('login');
+        this.form.reset();
 
       }).catch(error => {
         console.log(error);

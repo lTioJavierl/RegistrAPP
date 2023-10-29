@@ -54,7 +54,7 @@ export class LoginPage implements OnInit {
 
         this.firebaseSvc.signIn(this.form.value as User).then(res => {
 
-          this.getUserInfo(res.user.uid)
+          this.setUserInfo(res.user.uid)
 
       }).catch(error => {
         console.log(error);
@@ -72,8 +72,8 @@ export class LoginPage implements OnInit {
       })
     } 
   }
-
-  async getUserInfo(uid: string){
+  
+  async setUserInfo(uid: string){
     if(this.form.valid){
 
       const loading = await this.utilsSvc.loading();
@@ -84,8 +84,14 @@ export class LoginPage implements OnInit {
       this.firebaseSvc.getDocument(path).then((user: User) => {
 
         this.utilsSvc.saveLocalStorage('user', this.form.value);
-        this.utilsSvc.routerLink('home');
-        this.form.reset();
+        if (user.tipo_pagina == 'Alumno'){
+          this.utilsSvc.routerLink('home_alumnos');
+          this.form.reset();
+        }
+        if(user.tipo_pagina == 'Profesor'){
+          this.utilsSvc.routerLink('home_profesor');
+          this.form.reset();
+        }
 
           this.utilsSvc.presentToast({
             message: `Te damos la bienvenida ${user.name}`,

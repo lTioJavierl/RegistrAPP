@@ -16,8 +16,12 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/contra/contra.module').then( m => m.ContraPageModule)
   },
   {
-    path: 'home',
-    loadChildren: () => import('./paginas/home/home.module').then( m => m.HomePageModule)
+    path: 'home_alumnos',
+    loadChildren: () => import('./paginas/home_alumnos/home_alumnos.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'home_profesor',
+    loadChildren: () => import('./paginas/home_profesor/home_profesor.module').then( m => m.HomeProfesorPageModule)
   },
 ];
 
