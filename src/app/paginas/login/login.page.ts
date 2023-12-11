@@ -83,7 +83,7 @@ export class LoginPage implements OnInit {
 
       this.firebaseSvc.getDocument(path).then((user: User) => {
 
-        this.utilsSvc.saveLocalStorage('user', this.form.value);
+        this.utilsSvc.saveLocalStorage('user', { ...this.form.value, uid: uid });
         if (user.tipo_pagina == 'Alumno'){
           this.utilsSvc.routerLink('home_alumnos');
           this.form.reset();

@@ -1,1 +1,25 @@
 <app-header backButton="/login" title="Home Alumno"></app-header>
+
+<ion-content>
+
+<ion-card class="ion-text-center" style="border-block-color: black;">
+    <ion-card-title>
+        <strong>
+            <H2>Clase 1</H2>
+        </strong>
+    </ion-card-title>
+    <ion-card-content>
+        <strong>Clases asistidas: </strong> 2
+        <br>
+        <strong>Clases registradas: </strong> 3
+        <br>
+        <strong>Porcentaje asistencia: </strong> 66%
+    </ion-card-content>
+</ion-card>
+    
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="addAsistencia()">
+            <ion-icon name="Scan"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

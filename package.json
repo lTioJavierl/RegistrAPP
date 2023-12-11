@@ -23,11 +23,20 @@
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
     "@capacitor/android": "^5.5.1",
-    "@capacitor/cli": "^5.5.1",
-    "@capacitor/core": "^5.5.1",
+    "@capacitor/app": "5.0.6",
+    "@capacitor/core": "5.5.1",
+    "@capacitor/haptics": "5.0.6",
+    "@capacitor/keyboard": "5.0.6",
+    "@capacitor/status-bar": "5.0.6",
     "@ionic/angular": "^7.0.0",
+    "@techiediaries/ngx-qrcode": "^9.1.0",
+<<<<<<< HEAD
+    "angularx-qrcode": "^16.0.2",
+=======
+>>>>>>> 7b61c5e0bc1bc701bb1188ffcbf6ee3e2a77ee9d
     "firebase": "^10.5.0",
     "ionicons": "^7.0.0",
+    "qrcode": "^1.5.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -42,6 +51,7 @@
     "@angular/cli": "^16.0.0",
     "@angular/compiler-cli": "^16.0.0",
     "@angular/language-service": "^16.0.0",
+    "@capacitor/cli": "5.5.1",
     "@ionic/angular-toolkit": "^9.0.0",
     "@types/jasmine": "~4.3.0",
     "@types/node": "^12.11.1",

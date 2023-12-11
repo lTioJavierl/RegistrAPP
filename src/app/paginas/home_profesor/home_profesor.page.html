@@ -1,1 +1,38 @@
 <app-header backButton="/login" title="Home Profesor"></app-header>
+
+<ion-content>
+<<<<<<< HEAD
+    <ion-row>
+      <!-- Primer ion-card -->
+      <ion-col size="6">
+        <ion-card class="ion-text-center">
+          <h1 style="color: black;"><strong>Clase 1</strong></h1>
+          <ion-button (click)="generarQR()">
+            Generar QR de la clase
+          </ion-button>
+          <ion-card-content>
+            <qrcode *ngIf="qrCodeString" [qrdata]="qrCodeString" [width]="256" [errorCorrectionLevel]="'M'">
+            </qrcode>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+  
+      <!-- Segundo ion-card -->
+      <ion-col size="6">
+        <ion-card class="ion-text-center">
+            <h1 style="color: black;"><strong>Clase 2</strong></h1>
+          <ion-button (click)="generarQR2()">
+            Generar QR de la clase
+          </ion-button>
+          <ion-card-content>
+            <qrcode *ngIf="qrCodeString2" [qrdata]="qrCodeString2" [width]="256" [errorCorrectionLevel]="'M'">
+            </qrcode>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-content>
+=======
+    
+</ion-content>
+>>>>>>> 7b61c5e0bc1bc701bb1188ffcbf6ee3e2a77ee9d

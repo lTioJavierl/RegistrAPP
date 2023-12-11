@@ -8,6 +8,7 @@ import { HomeProfesorPageRoutingModule } from './home_profesor-routing.module';
 
 import { HomeProfesorPage } from './home_profesor.page';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     FormsModule,
     IonicModule,
     HomeProfesorPageRoutingModule,
-    SharedModule
+    SharedModule,
+    QRCodeModule
   ],
   declarations: [HomeProfesorPage]
 })

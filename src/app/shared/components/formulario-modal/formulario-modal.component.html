@@ -1,0 +1,78 @@
+<app-header [isModal]="true" title="Registro Asistencia"></app-header>
+<ion-content>
+  <div class="d-flex-center">
+    <form
+      [formGroup]="form"
+      class="ion-padding ion-text-center"
+      (ngSubmit)="submit()"
+      (keypress.enter)="submit()"
+    >
+      <h1>Registrar Asistencia</h1>
+
+      <!-- ==================== nombre ===================== -->
+
+      <app-custom-input
+        autocomplete="nombre"
+        [control]="form.controls.nombre"
+        type="nombre"
+        label="Nombre"
+      ></app-custom-input>
+
+      <div
+        class="validators"
+        *ngIf="form.controls.nombre.errors && form.controls.nombre.touched"
+      >
+        <div *ngIf="form.controls.nombre.errors?.['required']">
+          El nombre es requerido para continuar
+        </div>
+      </div>
+
+      <!-- ==================== fecha ===================== -->
+
+      <app-custom-input
+        autocomplete="fecha"
+        [control]="form.controls.fecha"
+        type="fecha"
+        label="Fecha"
+      ></app-custom-input>
+
+      <div
+        class="validators"
+        *ngIf="form.controls.fecha.errors && form.controls.fecha.touched"
+      >
+        <div *ngIf="form.controls.fecha.errors?.['required']">
+          El nombre es requerido para continuar
+        </div>
+      </div>
+
+      <!-- ==================== estado ===================== -->
+
+      <app-custom-input
+        autocomplete="estado"
+        [control]="form.controls.estado"
+        type="estado"
+        label="Estado"
+      ></app-custom-input>
+
+      <div
+        class="validators"
+        *ngIf="form.controls.estado.errors && form.controls.estado.touched"
+      >
+        <div *ngIf="form.controls.estado.errors?.['required']">
+          El nombre es requerido para continuar
+        </div>
+      </div>
+
+      <!-- ==================== Registro asistencia boton ===================== -->
+
+      <ion-button
+        mode="ios"
+        class="ion-margin"
+        type="submit"
+        [disabled]="form.invalid"
+      >
+        Registrar asistencia
+      </ion-button>
+    </form>
+  </div>
+</ion-content>
